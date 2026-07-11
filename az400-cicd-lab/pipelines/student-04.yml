@@ -7,7 +7,6 @@ pr:
   include:
     - feature/student-04
 pool:
-pool:
   vmImage: ubuntu-latest
 
 variables:
