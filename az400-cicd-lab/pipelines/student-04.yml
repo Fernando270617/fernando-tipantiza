@@ -1,14 +1,12 @@
 trigger: 
   batch: "true" 
   branches: 
-    include: 
-      - main 
+    - feature/student-04 
  
 pr: 
   autoCancel: "true" 
   branches: 
-    include: 
-      - main 
+    - feature/student-04 
  
 pool: 
   vmImage: ubuntu-latest 
