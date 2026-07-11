@@ -14,7 +14,7 @@ pool:
   vmImage: ubuntu-latest 
  
 variables: 
-  artifactName: sitio-web 
+  artifactName: sitio-web-student-04 
   webAppName: web-az400-cicd-ap-20260619 
  
 stages: 
@@ -106,10 +106,10 @@ stages:
         rootFolderOrFile: $(Build.ArtifactStagingDirectory)/site 
         includeRootFolder: false 
         archiveType: zip 
-        archiveFile: $(Build.ArtifactStagingDirectory)/sitio-web.zip 
+        archiveFile: $(Build.ArtifactStagingDirectory)/sitio-web-student-04.zip 
         replaceExistingArchive: true 
  
-    - publish: $(Build.ArtifactStagingDirectory)/sitio-web.zip 
+    - publish: $(Build.ArtifactStagingDirectory)/sitio-web-student-04.zip 
       displayName: Publicar artefacto 
       artifact: $(artifactName) 
  - stage: CD 
@@ -144,4 +144,4 @@ stages:
               azureSubscription: 
               appType: webAppLinux sc-az400-cicd-lab 
               appName: $(webAppName) 
-              package: $(Pipeline.Workspace)/$(artifactName)/sitio-web.zip 
+              package: $(Pipeline.Workspace)/$(artifactName)/sitio-web-student-04.zip 
